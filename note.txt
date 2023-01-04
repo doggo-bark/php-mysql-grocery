@@ -1,0 +1,37 @@
+sudo /opt/lampp/./mananger-linux-x64.run
+sudo /opt/lampp/lampp start
+
+can't start mysql in xampp? -> already have mysql install, stop the mysql service, open xampp and try to start mysql again.
+(sudo) service mysql status/start/stop
+
+htdocs? the default root of the app 
+
+create files in htdocs: add.php, connect.php, ...
+basic html structure ! enter
+
+
+
+
+use VScode plug-in live server instead of xampp? 
+    Probably no. VScode works mainly in static webpage but also works with dynamic webpage(web dong) like php, nodejs, asp.net. But they are not the same thing https://www.quora.com/Can-I-use-Visual-Studio-Code-instead-of-XAMPP
+    TRY later.
+
+print php query error:
+    $result=mysqli_query($con, $query);
+    if (!$result) {echo("something is wrong: " .mysqli_error($con));}
+	
+put php code above html, don't know why, but .e.g:
+    <?php if (isset($_POST['btn'])) ...
+    <html> <input type="submit" name='btn' ...
+    both command refer to the same 'btn', the 'btn' in the current .php file
+
+since php and html are mixed like 
+    <?php if ... { ?>    <html></html>     <?php  }  ?> then probably code execution is linear
+    also the php code run linear, some php code is above to get some variables so below php code have something do deal with
+    (if isset 'btn' ) at the top but the 'btn' is down below??
+
+
+
+
+
+
